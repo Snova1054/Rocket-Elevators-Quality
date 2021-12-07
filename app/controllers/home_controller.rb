@@ -3,6 +3,10 @@ require 'zendesk_main'
 class HomeController < ApplicationController
   def index
   end
+
+  # def show
+  #   render action: "index"
+  # end
   
   def new
     @lead = Lead.new

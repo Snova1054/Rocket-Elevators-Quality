@@ -3,7 +3,7 @@ require "ibm_watson/text_to_speech_v1"
 include IBMWatson
 
 authenticator = Authenticators::IamAuthenticator.new(
-  apikey: ENV["ibm_watson_api_key"]
+  apikey: "XonmBszwvVddmK8DmLFOwEkGvfHnxGxkd-FpacGy22OR"
 )
 
 $text_to_speech = TextToSpeechV1.new(
