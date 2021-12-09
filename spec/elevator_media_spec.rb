@@ -1,7 +1,6 @@
 require 'rails_helper'
 require 'elevator_media'
 require 'rest-client'
-require 'devise'
 
 describe ElevatorMedia, type: :feature do
     describe "Streamer" do
@@ -26,23 +25,22 @@ describe ElevatorMedia, type: :feature do
                     fill_in "user_email", with: "hello@go.ca"
                     fill_in "user_password", with: "123123"
                     click_button "Log in"
-                
+
                     expect(page).to have_text "Invalid"
-                    # find('#user-menu-button').click
-                    # expect(page).to have_link "Sign out"
-                    # expect(page).to have_current_path root_path
+                    expect(ElevatorMedia::Streamer.getContent("Invalid")).to include("<div>Invalid</div>") && be_a(String)
                 end
             end
             context "valid with correct credentials" do
-                it "tries to log in with real credentials and returns a 'success' text" do
+                it "tries to log in with real credentials and returns a 'successful' text" do
                     visit new_user_session_path
                     fill_in "user_email", with: "nicolas.genest@codeboxx.biz"
                     fill_in "user_password", with: "Codeboxx1"
                     click_button "Log in"
-                
+
                     expect(page).to have_current_path root_path
                     expect(page).to have_link "LOGOUT"
                     expect(page).to have_text "Signed in successfully."
+                    expect(ElevatorMedia::Streamer.getContent("Signed in successfully.")).to include("<div>Signed in successfully.</div>") && be_a(String)
                 end
             end
         end
