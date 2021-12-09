@@ -7,12 +7,9 @@ class QuotesController < ApplicationController
   end
 
   def index
-    @quotes = Quote.all
+    redirect_to main_app.root_path
   end
 
-  def show
-    @quote = Quote.find(params[:id])
-  end
   
   def create
     @quote = Quote.new(quote_params)

@@ -1,5 +1,7 @@
-class MapController < ApplicationController 
+class MapController < ApplicationController
+    before_action :authenticate_user!, :only => [:index]
     def index
+        redirect_to main_app.root_path unless current_user.admin? || current_user.employee?
         client = OpenWeather::Client.new(
             api_key: ENV["open_weather_api_key"]
           )

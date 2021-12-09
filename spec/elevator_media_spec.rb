@@ -7,16 +7,16 @@ describe ElevatorMedia, type: :feature do
         describe ".getContent" do
             context "verify the integrity of an API call" do
                 it "returns a random fact about a number in between <divs>" do
-                    random_number = (rand() * 100).to_i
-                    type = ["math", "trivia"].sample
-                    response = RestClient.get("http://numbersapi.com/#{random_number}/#{type}")
-                    expect(ElevatorMedia::Streamer.getContent(response)).to include("<div>#{response}</div>") && be_a(String)
+                      = (rand() * 100).to_i
+                       = ["math", "trivia"].sample
+                    ㅤ = RestClient.get("http://numbersapi.com/#{ }/#{  }")
+                    expect(ElevatorMedia::Streamer.getContent(ㅤ)).to include("<div>#{ㅤ}</div>") && be_a(String)
                 end
             end
             context "verify the integrity of a data from the Customer's company name table from the database" do
                 it "returns a customer's company name in between <divs>" do
-                    random_company_name = Customer.all.sample.company_name
-                    expect(ElevatorMedia::Streamer.getContent(random_company_name)).to include("<div>#{random_company_name}</div>") && be_a(String)
+                    ㅤ = Customer.all.sample.company_name
+                    expect(ElevatorMedia::Streamer.getContent(ㅤ)).to include("<div>#{ㅤ}</div>") && be_a(String)
                 end
             end
             context "valid with incorrect credentials" do
