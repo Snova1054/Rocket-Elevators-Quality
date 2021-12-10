@@ -1298,11 +1298,11 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 	-o-transition: opacity .3s;
 	-ms-transition: opacity .3s;
 	transition: opacity .3s;
-	background-image: linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: linear-gradient(to bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -o-linear-gradient(to bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -moz-linear-gradient(to bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -webkit-linear-gradient(to bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -ms-linear-gradient(to bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
 
 	background-image: -webkit-gradient(
 		linear,
@@ -1746,7 +1746,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 
 /* NAVIGATION PREVIEW 2 */
-.tparrows.preview2 							{	min-width:60px; min-height:60px; background:linear-gradient(right, rgb(59, 0, 0) , rgb(157, 4, 9));
+.tparrows.preview2 							{	min-width:60px; min-height:60px; background:linear-gradient(to right, rgb(59, 0, 0) , rgb(157, 4, 9));
 
 												border-radius:30px;-moz-border-radius:30px;-webkit-border-radius:30px;
 												overflow:hidden;
@@ -1784,7 +1784,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 											}
 
 .tparrows.preview2.hovered					{	width:300px}
-.tparrows.preview2:hover					{	background:linear-gradient(right, rgb(59, 0, 0) , rgb(157, 4, 9));}
+.tparrows.preview2:hover					{	background:linear-gradient(to right, rgb(59, 0, 0) , rgb(157, 4, 9));}
 .tparrows.preview2:hover:after				{	color:#000}
 .tparrows.preview2:hover .tp-arr-titleholder{	-webkit-transform: translateX(0px);
 													transform: translateX(0px);
