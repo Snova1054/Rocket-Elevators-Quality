@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery prepend: true
 
     def require_admin
         # depending on your auth, something like...
