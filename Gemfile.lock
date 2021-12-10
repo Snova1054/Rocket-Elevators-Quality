@@ -474,7 +474,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.6)
-  rails_admin (~> 2.0)
+  rails_admin
   rails_admin_material
   rest-client
   rspec-rails (~> 4.1.0)

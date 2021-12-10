@@ -5,7 +5,7 @@ git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 ruby '2.6.6'
 
 #Gem rails admin and the theme
-gem 'rails_admin', '~> 2.0'
+gem 'rails_admin'
 
 gem 'rails_admin_material'
 
