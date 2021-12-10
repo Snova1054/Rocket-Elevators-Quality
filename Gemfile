@@ -54,8 +54,8 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# call bootstrap 4
-gem 'bootstrap', '~> 5.0.1'
+# call bootstrap 5.1.3
+gem 'bootstrap', '~> 5.1.3'
 # call zendesk api
 gem 'zendesk_api'
 # call google maps api
