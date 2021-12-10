@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Blazer::Engine, at: "blazer"
-  devise_for :users
-  # scope defaults: (Rails.env.production? ? { protocol: 'https' } : {}) do
-  #   devise_for :users
-  # end
-  # scope defaults: (Rails.env.development? ? { protocol: 'https' } : {}) do
-  #   devise_for :users
-  # end
   root 'home#index'
+  devise_for :users
   resources :home
   resources :quotes
   # get 'interventions/index'
