@@ -1,8 +1,9 @@
 Rails.application.configure do
   config.to_prepare { Devise::SessionsController.force_ssl }
   config.to_prepare { Devise::RegistrationsController.force_ssl }
+  config.to_prepare { Devise::PasswordsController.force_ssl }
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = {host: "blazer.dokkuapp.com"}
+  config.action_mailer.default_url_options = { protocol: 'https', host: "blazer.dokkuapp.com"}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
