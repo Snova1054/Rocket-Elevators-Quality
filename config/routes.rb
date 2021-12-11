@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :home
   devise_for :users
-  # devise_for :users, path: '', protocol: "https", path_names: { sign_in: 'users/sign_in', sign_out: 'users/sign_out' }
   resources :quotes
   resources :interventions
   get 'intervention', to: 'interventions#index'
