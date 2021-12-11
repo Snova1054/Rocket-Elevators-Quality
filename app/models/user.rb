@@ -7,6 +7,6 @@ class User < ApplicationRecord
 
   def password_special
     return if password.blank? || password =~ /\A(?=.*\d)(?=.*[A-Z])(?=.*\W)[^ ]{8,}\z/
-    errors.add :password, 'Password should contain a minimum of 8 characters including 1 uppercase letter, 1 number, 1 special character'
+    errors.add :password, 'Minimum requirements of 8 characters including 1 uppercase letter, 1 number, 1 special character'
   end
 end
