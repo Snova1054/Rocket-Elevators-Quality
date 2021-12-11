@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Blazer::Engine, at: "blazer"
-  devise_for :users
+  devise_for :users, path: '', protocol: "https", path_names: { sign_in: 'login', sign_out: 'logout' }
   root 'home#index'
   resources :home
   resources :quotes
