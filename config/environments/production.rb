@@ -1,9 +1,9 @@
 Rails.application.configure do
+  # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { protocol: 'https', host: "rocket-elevators.xyz"}
   config.to_prepare { Devise::SessionsController.force_ssl }
   config.to_prepare { Devise::RegistrationsController.force_ssl }
   config.to_prepare { Devise::PasswordsController.force_ssl }
-  # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = { protocol: 'https', host: "rocket-elevators.xyz"}
    # Code is not reloaded between requests.
   config.cache_classes = true
 
