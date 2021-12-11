@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     # protect_from_forgery prepend: true, with: :exception  
-    # skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token
     
     def require_admin
         redirect_to main_app.root_path unless current_user && current_user.admin? || current_user.employee?
