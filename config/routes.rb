@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Blazer::Engine, at: "blazer"
   root 'home#index'
   resources :home
-  devise_for :users, path: '', protocol: "https", path_names: { sign_in: 'login', sign_out: 'logout' }
+  devise_for :users, path: '', protocol: "https", path_names: { sign_in: 'users/sign_in', sign_out: 'users/sign_out' }
   puts("Hello")
   resources :quotes
   resources :interventions
