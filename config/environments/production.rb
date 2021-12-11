@@ -3,8 +3,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { protocol: 'https', host: "rocket-elevators.xyz"}
   config.to_prepare { Devise::SessionsController.force_ssl }
   config.to_prepare { Devise::RegistrationsController.force_ssl }
-  config.to_prepare { Devise::PasswordsController.force_ssl }
-   # Code is not reloaded between requests.
+  # Code is not reloaded between requests.
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
