@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Blazer::Engine, at: "blazer"
+  devise_for :users
   root 'home#index'
   resources :home
   resources :quotes
-  # get 'interventions/index'
   resources :interventions
   get 'intervention', to: 'interventions#index'
   get 'quote', to: 'quotes#new'
