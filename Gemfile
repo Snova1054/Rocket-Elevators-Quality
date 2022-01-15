@@ -7,6 +7,8 @@ ruby '2.6.6'
 #Gem rails admin and the theme
 gem 'rails_admin'
 
+gem 'newrelic_rpm'
+
 gem 'rails_admin_material'
 
 gem 'blazer'
